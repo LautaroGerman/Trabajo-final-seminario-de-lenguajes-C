@@ -74,3 +74,21 @@ usuario. Ejemplos de uso:
 ### Ejemplos de imagenes
 
 El directorio `./samples` tiene ejemplo de PPMs
+
+## Ejemplo provisto
+
+Se entrega código que implementa la funcionalidad básica de lectura y creación
+de PPMs. Además, se entrega un ejemplo de programa principal y la función que
+devuelve el negativo de una imagen. 
+
+Para compilar el código entregado:
+
+```
+gcc -o ppm-processor-sample *c -Wall
+```
+
+Y es posible probarlo de la siguiente forma:
+
+```
+./ppm-processor-sample samples/couple.ppm
+```
