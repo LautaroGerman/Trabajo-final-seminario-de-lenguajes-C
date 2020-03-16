@@ -1,5 +1,5 @@
-#ifndef _PPM_H
-#define _PPM_H
+#ifndef __PPM_H
+#define __PPM_H
 
 #include <stdio.h>
 
