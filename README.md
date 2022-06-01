@@ -1,4 +1,4 @@
-## Trabajo Final de Seminario de Lenguajes C
+## Trabajo Final de Seminario de Lenguajes C: PPM image processor
 
 El trabajo final consiste en implementar la funcionalidad faltante del programa
 que provee el presente repositorio.
