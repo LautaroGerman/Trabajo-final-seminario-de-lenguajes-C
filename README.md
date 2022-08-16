@@ -27,12 +27,13 @@ funciones:
   valor actual del pixel (cuando el resultado es negativo, como son valores
   unsigned funciona como se espera).
 * **Rotar a 90 grados:** una imagen de **x** ancho por **y** alto será rotada a 90
-  grados, siendo la nueva imagen de **y** ancho por **x** alto. Luego, cada pixel en la
-  posición original `[i,j]` será colocado en la posición `[j,i]` del destino.
+  grados, siendo la nueva imagen de **y** ancho por **x** alto. Luego, cada pixel
+  en la posición original `[i,j]` será colocado en la posición `[x-j-1,i]` del
+  destino.
 * **Espejado horizontal:** cada pixel de la imagen resultado en la posición 
   `[i,j]` se calcula como el correspondiente `[i,width-j-1]`
 * **Espejado vertical:** cada pixel de la imagen resultado en la posición 
-  `[i,j]` se calcula como el correspondiente `[i-height-1,j]`
+  `[i,j]` se calcula como el correspondiente `[height-i-1,j]`
 * **Desenfoque:** cada pixel en la posición `[i,j]` con un radio **r**
   especificado como argumento se calcula como el promedio de los pixeles en las
   posiciones que van desde `[max(i-r,0),max(j-r,0)]` hasta `[min(i+r,height-1),min(j+r,width-1)]`
