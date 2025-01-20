@@ -1,3 +1,6 @@
+Este trabajo está basado en la propuesta presentada en [https://github.com/chrodriguez/ppm-ejercicio-c](https://github.com/chrodriguez/ppm-ejercicio-c).
+
+
 ## Trabajo Final de Seminario de Lenguajes C: PPM image processor
 
 El trabajo final consiste en implementar la funcionalidad faltante del programa
