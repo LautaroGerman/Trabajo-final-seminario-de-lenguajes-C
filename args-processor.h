@@ -1,7 +1,7 @@
 #ifndef __ARGS_PROCESSOR_H
 #define __ARGS_PROCESSOR_H
 
-#include <getopt.h> // The optarg var is global and defined in this header
+#include <getopt.h> // The optarg var is global and defined in this heade
 #include <stdio.h>
 #include <error.h>
 
