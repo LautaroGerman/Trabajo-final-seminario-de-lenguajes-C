@@ -55,9 +55,15 @@ void check_output_file(FILE *out, FILE *in, t_ppm *img) {
   }
 }
 
+/* Free img1 and assign img2 to it */
+void free_and_assign_ppm(t_ppm *img1, t_ppm *img2) {
+  ppm_free(*img1);
+  *img1 = *img2;
+}
+
 void process_args(int argc, char **argv) {
   int opt;
-  t_ppm img = {};
+  t_ppm img = {}, tmp = {};
   FILE *input_file = NULL, *output_file = NULL;
 
   while ((opt = getopt(argc, argv, OPT_STRING)) != -1) {
@@ -75,23 +81,28 @@ void process_args(int argc, char **argv) {
         break;
       case 'n':
         check_input_file(input_file, output_file, &img);
-        img = ppm_operation_negative(img);
+        tmp = ppm_operation_negative(img);
+        free_and_assign_ppm(&img, &tmp);
         break;
       case 'r':
         check_input_file(input_file, output_file, &img);
-        img = ppm_operation_rotate90(img);
+        tmp = ppm_operation_rotate90(img);
+        free_and_assign_ppm(&img, &tmp);
         break;
       case 'h':
         check_input_file(input_file, output_file, &img);
-        img = ppm_operation_flip_horizontal(img);
+        tmp = ppm_operation_flip_horizontal(img);
+        free_and_assign_ppm(&img, &tmp);
         break;
       case 'v':
         check_input_file(input_file, output_file, &img);
-        img = ppm_operation_flip_vertical(img);
+        tmp = ppm_operation_flip_vertical(img);
+        free_and_assign_ppm(&img, &tmp);
         break;
       case 'b':
         check_input_file(input_file, output_file, &img);
-        img = ppm_operation_blur(img, atoi(optarg));
+        tmp = ppm_operation_blur(img, atoi(optarg));
+        free_and_assign_ppm(&img, &tmp);
         break;
       case ':':
         handle_error(input_file, output_file, &img, "Option -%c requires an argument", optopt);
