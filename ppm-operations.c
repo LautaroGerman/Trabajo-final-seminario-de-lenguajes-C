@@ -39,19 +39,20 @@ t_ppm ppm_operation_flip_vertical(t_ppm p){
 
 t_ppm_pixel blur_pixel(t_ppm p, int row, int col, unsigned char ratio){
   t_ppm_pixel new_pixel = {0, 0, 0};
+  unsigned int red = 0, green = 0, blue = 0;
   int count = 0;
   for (int i = max(row-ratio, 0); i <= min(row+ratio, (int) p.height-1); i++) {
     for (int j = max(col-ratio, 0); j <= min(col+ratio, (int) p.width-1); j++) {
-      new_pixel.red += p.pixels[i][j].red;
-      new_pixel.green += p.pixels[i][j].green;
-      new_pixel.blue += p.pixels[i][j].blue;
+      red += p.pixels[i][j].red;
+      green += p.pixels[i][j].green;
+      blue += p.pixels[i][j].blue;
       count++;
     }
   }
 
-  new_pixel.red /= count;
-  new_pixel.green /= count;
-  new_pixel.blue /= count;
+  new_pixel.red = red / count;
+  new_pixel.green = green / count;
+  new_pixel.blue = blue / count;
 
   return new_pixel;
 }
