@@ -1,6 +1,6 @@
 ## Trabajo Final de Seminario de Lenguajes C: PPM image processor
 
-Las propuesta y especificaciones del trabajo pueden verse detalladamente en: [https://github.com/chrodriguez/ppm-ejercicio-c](https://github.com/chrodriguez/ppm-ejercicio-c).
+La propuesta y especificaciones del trabajo pueden verse detalladamente en: [https://github.com/chrodriguez/ppm-ejercicio-c](https://github.com/chrodriguez/ppm-ejercicio-c).
 
 Los detalles del trabajo realizado pueden verse en el archivo [Informe.pdf](Informe.pdf).
 
