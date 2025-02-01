@@ -51,7 +51,7 @@ gcc -o ppm-processor.o main.c args-processor.c ppm-operations.c ppm.c utils.c -W
 ### Ejemplo
 
 ```
-./ppm-processor.o -i samples/model.ppm -o model-out.ppm -n -r -b 2
+./ppm-processor.o -i samples/model.ppm -o model-out.ppm -n -r -b 3
 ```
 
 ### Tests
