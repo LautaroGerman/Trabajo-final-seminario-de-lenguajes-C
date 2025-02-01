@@ -55,7 +55,7 @@ gcc -o ppm-processor.o main.c args-processor.c ppm-operations.c ppm.c utils.c -W
 ```
 
 ### Tests
-El archivo build/run_tests.sh corre todos los test realizados. Para poder ejecutarlo se necesitan las
+El archivo tests/run_tests.sh corre todos los test realizados. Para poder ejecutarlo se necesitan las
 dependencias valgrind y cmocka:
 
 ```
