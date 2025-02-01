@@ -7,7 +7,7 @@
 #include "ppm-operations.h"
 #include "ppm.h"
 
-#define OPT_STRING ":i:o:b:nrhv?"
+#define OPT_STRING ":i:o:b:nrhv"
 #define HELP_TEXT \
   "Usage: program_name [options]\n\n" \
   "Available options:\n" \
@@ -108,11 +108,16 @@ void process_args(int argc, char **argv) {
         handle_error(input_file, output_file, &img, "Option -%c requires an argument", optopt);
         break;
       case '?':
-        printf("%s\n", HELP_TEXT);
-        exit(0);
+        if (optopt == '?') {
+          printf("%s\n", HELP_TEXT);
+          exit(0);
+        }
+        else {
+          handle_error(input_file, output_file, &img, "Unknown option -%c", optopt);
+        }
         break;
       default:
-        handle_error(input_file, output_file, &img, "Unknown option -%c", optopt);
+        handle_error(input_file, output_file, &img, "Unknown error, the option is -%c", optopt);
     }
   }
   check_input_file(input_file, output_file, &img);
