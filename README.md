@@ -35,7 +35,7 @@ Ejemplos de uso:
 ### Rota una imagen, y luego calcula el negativo
 
 ```
-./images -i input.ppm -n -o output.ppm
+./images -i input.ppm -n -o output.ppm -r
 ```
 
 ### Ejemplos de imágenes
